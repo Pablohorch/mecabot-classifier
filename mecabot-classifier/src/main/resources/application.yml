@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: mecabot-classifier
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mecabot_db # Reemplazar con el placeholder si es necesario, ej: ${DB_URL:jdbc:postgresql://localhost:5432/mecabot_db}
+    username: user # Reemplazar con el placeholder si es necesario, ej: ${DB_USER:user}
+    password: password # Reemplazar con el placeholder si es necesario, ej: ${DB_PASSWORD:password}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update # En desarrollo puede ser 'create' o 'create-drop', en producción 'validate' o 'none'
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+openai:
+  api:
+    key: ${OPENAI_API_KEY} # Leer de variable de entorno
+
+server:
+  port: 8080

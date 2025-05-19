@@ -1,0 +1,69 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                              https://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <localRepository/> <!-- Dejar vacío para usar el default ~/.m2/repository o especificar una ruta local si se desea -->
+  <interactiveMode>true</interactiveMode>
+  <usePluginRegistry>false</usePluginRegistry>
+  <offline>false</offline>
+
+  <profiles>
+    <profile>
+      <id>central-only</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <repositories>
+        <repository>
+          <id>central</id>
+          <name>Maven Central</name>
+          <url>https://repo.maven.apache.org/maven2</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled> <!-- O true si necesitas snapshots de Central -->
+          </snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>central</id>
+          <name>Maven Central</name>
+          <url>https://repo.maven.apache.org/maven2</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled> <!-- O true si necesitas snapshots de Central -->
+          </snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+
+  <activeProfiles>
+    <activeProfile>central-only</activeProfile>
+  </activeProfiles>
+
+  <!-- 
+  Para asegurarnos de que no se usa ningún mirror de BBVA, 
+  comentamos o eliminamos la sección de mirrors.
+  Si tu settings.xml global tiene mirrors, esta sección vacía 
+  o la ausencia de ella en el settings local NO los desactivará directamente.
+  La forma más robusta de evitar mirrors es no tenerlos definidos en el settings.xml que se usa.
+  Si el settings.xml global los define y se carga, pueden seguir aplicando.
+  La opción -s asegura que SOLO se usa este settings.xml.
+  -->
+  <mirrors>
+    <!-- 
+    <mirror>
+      <id>internal-repository</id>
+      <name>Maven Repository Manager running on repo.mycompany.com</name>
+      <url>http://repo.mycompany.com/proxy</url>
+      <mirrorOf>*</mirrorOf> 
+    </mirror>
+    -->
+  </mirrors>
+
+</settings>
