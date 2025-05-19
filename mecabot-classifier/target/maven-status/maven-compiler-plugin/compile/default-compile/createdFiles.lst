@@ -1,8 +1,0 @@
-com/mecabot/repository/RepairCategoryRepository.class
-com/mecabot/service/OpenAiClient.class
-com/mecabot/controller/ClassificationController.class
-com/mecabot/service/ClassificationService.class
-com/mecabot/entity/RepairCategory.class
-com/mecabot/model/ClassificationRequest.class
-com/mecabot/model/ClassificationResponse.class
-com/mecabot/MecabotClassifierApplication.class

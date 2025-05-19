@@ -1,8 +1,0 @@
-/Users/pood/Personal/chatMeca/mecabot-classifier/src/main/java/com/mecabot/MecabotClassifierApplication.java
-/Users/pood/Personal/chatMeca/mecabot-classifier/src/main/java/com/mecabot/controller/ClassificationController.java
-/Users/pood/Personal/chatMeca/mecabot-classifier/src/main/java/com/mecabot/entity/RepairCategory.java
-/Users/pood/Personal/chatMeca/mecabot-classifier/src/main/java/com/mecabot/model/ClassificationRequest.java
-/Users/pood/Personal/chatMeca/mecabot-classifier/src/main/java/com/mecabot/model/ClassificationResponse.java
-/Users/pood/Personal/chatMeca/mecabot-classifier/src/main/java/com/mecabot/repository/RepairCategoryRepository.java
-/Users/pood/Personal/chatMeca/mecabot-classifier/src/main/java/com/mecabot/service/ClassificationService.java
-/Users/pood/Personal/chatMeca/mecabot-classifier/src/main/java/com/mecabot/service/OpenAiClient.java
